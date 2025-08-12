@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Valentin Skald — Photography Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Merriweather:wght@700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <nav class="site-nav" aria-label="Primary">
+      <a class="brand-link" href="index.html"><span class="logo-text">Valentin Skald</span></a>
+      <ul class="nav">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="info.html">Info</a></li>
+      </ul>
+    </nav>
+
+    <div class="brand brand--home">
+      <h1 class="site-title">Photography Portfolio</h1>
+      <p class="tagline">Fine art–street photography informed by archives and material culture.</p>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="intro section">
+      <div class="intro-grid">
+        <figure class="portrait">
+          <img src="assets/valentin-portrait.jpg" alt="Portrait of Valentin Skald in soft window light, hands clasped beneath chin in a black turtleneck, shallow depth of field with a warm interior blur." />
+          <figcaption class="caption">Portrait</figcaption>
+        </figure>
+
+        <article class="about">
+          <h2>About</h2>
+          <p>I photograph when a subject’s color, line, or light–shadow structure demands attention. My practice sits between fine art and street photography and is informed by training in history, libraries, and archives.</p>
+          <p>I focus on material culture and human interaction with objects, alongside the ways nature appears in everyday spaces. Recurring motifs include thresholds and low light—lamps, windows, silhouettes—where comfort and unease coexist. I don’t aim for ambiguity; interpretation is simply part of viewing. The work functions as a record of encounter, shaped by interests in nostalgia, personal possessions, semiotics, and the histories they carry.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Connect</h2>
+      <ul class="links">
+        <li><a href="mailto:valentinskald@gmail.com">valentinskald@gmail.com</a></li>
+        <li><a href="https://www.linkedin.com/in/valentin-skald/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://www.instagram.com/future_tome/" target="_blank" rel="noopener">Instagram @future_tome</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Valentin Skald · Content licensed <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a></p>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

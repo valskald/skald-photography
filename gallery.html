@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gallery — Valentin Skald</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Merriweather:wght@700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <nav class="site-nav" aria-label="Primary">
+      <a class="brand-link" href="index.html"><span class="logo-text">Valentin Skald</span></a>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+        <li><a href="info.html">Info</a></li>
+      </ul>
+    </nav>
+
+    <div class="gallery-hero">
+      <h1 class="site-title">Gallery</h1>
+      <p class="tagline">Light, texture, and the temporal — recurring motifs in my work.</p>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <h2>Browse by motif</h2>
+      <p class="filters-note">Use the filter to focus on a single motif. Images preserve aspect ratio across screen sizes.</p>
+      <div class="filters" role="group" aria-label="Filter gallery by motif">
+        <button class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-btn" data-filter="light" aria-pressed="false">Light</button>
+        <button class="filter-btn" data-filter="texture" aria-pressed="false">Texture</button>
+        <button class="filter-btn" data-filter="temporal" aria-pressed="false">Temporal</button>
+      </div>
+    </section>
+
+    <section class="gallery-layout">
+      <aside class="gallery-aside">
+        <h2>About this selection</h2>
+        <p>Motifs reflect ongoing concerns: the way light structures space, the tactility of surfaces, and time’s trace in landscape and the built environment.</p>
+
+        <h3>Related</h3>
+        <ul class="links">
+          <li><a href="mailto:valentinskald@gmail.com">valentinskald@gmail.com</a></li>
+          <li><a href="https://www.linkedin.com/in/valentin-skald/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/future_tome/" target="_blank" rel="noopener">Instagram @future_tome</a></li>
+        </ul>
+      </aside>
+
+      <section class="gallery-grid" aria-label="Image gallery">
+        <!-- light -->
+        <figure class="tile" data-category="light">
+          <a href="assets/portfolio/penumbra.jpg" class="lb-link" data-title="Penumbra">
+            <img src="assets/portfolio/penumbra.jpg" alt="Forest understory with a moss-draped tree trunk catching a shaft of light; fine strands and leaves in shadow." loading="lazy" />
+          </a>
+          <figcaption class="tile-cap">Penumbra</figcaption>
+        </figure>
+
+        <figure class="tile" data-category="light">
+          <a href="assets/portfolio/watcher.jpg" class="lb-link" data-title="Watcher">
+            <img src="assets/portfolio/watcher.jpg" alt="Cat silhouette behind a frosted glass window, framed by four panes and surrounded by darkness." loading="lazy" />
+          </a>
+          <figcaption class="tile-cap">Watcher</figcaption>
+        </figure>
+
+        <figure class="tile" data-category="light">
+          <a href="assets/portfolio/stay-on-the-path.jpg" class="lb-link" data-title="Stay on the Path">
+            <img src="assets/portfolio/stay-on-the-path.jpg" alt="Night scene with a glowing lamppost illuminating branches; deep black background and soft color spill." loading="lazy" />
+          </a>
+          <figcaption class="tile-cap">Stay on the Path</figcaption>
+        </figure>
+
+        <figure class="tile" data-category="light">
+          <a href="assets/portfolio/evanescent.jpg" class="lb-link" data-title="Evanescent Glass">
+            <img src="assets/portfolio/evanescent.jpg" alt="Amber glass vases in low light casting luminous reflections and shadows on a wall." loading="lazy" />
+          </a>
+          <figcaption class="tile-cap">Evanescent Glass</figcaption>
+        </figure>
+
+        <!-- texture -->
+        <figure class="tile" data-category="texture">
+          <a href="assets/portfolio/the-lovers-1.jpg" class="lb-link" data-title="The Lovers I">
+            <img src="assets/portfolio/the-lovers-1.jpg" alt="Dense tangle of exposed roots and pale wood fibers interlaced in organic patterns." loading="lazy" />
+          </a>
+          <figcaption class="tile-cap">The Lovers I</figcaption>
+        </figure>
+
+        <figure class="tile" data-category="texture">
+          <a href="assets/portfolio/the-lovers-2.jpg" class="lb-link" data-title="The Lovers II">
+            <img src="assets/portfolio/the-lovers-2.jpg" alt="Sunlight ripples across shallow water, bright lattice of reflections over sand." loading="lazy" />
+          </a>
+          <figcaption class="tile-cap">The Lovers II</figcaption>
+        </figure>
+
+        <figure class="tile" data-category="texture">
+          <a href="assets/portfolio/wayward.jpg" class="lb-link" data-title="Wayward">
+            <img src="assets/portfolio/wayward.jpg" alt="Glossy holly leaves and clusters of red berries emerging from a dark green thicket." loading="lazy" />
+          </a>
+          <figcaption class="tile-cap">Wayward</figcaption>
+        </figure>
+
+        <figure class="tile" data-category="texture">
+          <a href="assets/portfolio/wisteria.jpg" class="lb-link" data-title="Wisteria">
+            <img src="assets/portfolio/wisteria.jpg" alt="Close view of wisteria blossoms hanging from a branch; soft violet petals against a spring sky." loading="lazy" />
+          </a>
+          <figcaption class="tile-cap">Wisteria</figcaption>
+        </figure>
+
+        <!-- temporal -->
+        <figure class="tile" data-category="temporal">
+          <a href="assets/portfolio/time-is-running-out.jpg" class="lb-link" data-title="Time Is Running Out">
+            <img src="assets/portfolio/time-is-running-out.jpg" alt="Lucky Strike smokestack and one-way sign at night in Durham; brick tower lit against a black sky." loading="lazy" />
+          </a>
+          <figcaption class="tile-cap">Time Is Running Out</figcaption>
+        </figure>
+
+        <figure class="tile" data-category="temporal">
+          <a href="assets/portfolio/off-kilter.jpg" class="lb-link" data-title="Off-Kilter Lines">
+            <img src="assets/portfolio/off-kilter.jpg" alt="Low-angle view of telephone wires and a gabled house skewed toward the sky, late sun bright through textured clouds." loading="lazy" />
+          </a>
+          <figcaption class="tile-cap">Off-Kilter Lines</figcaption>
+        </figure>
+
+        <figure class="tile" data-category="temporal">
+          <a href="assets/portfolio/quickly-for-him.jpg" class="lb-link" data-title="Quickly For Him">
+            <img src="assets/portfolio/quickly-for-him.jpg" alt="Rural intersection after rain at sunset; three amber signals glow against a purple-orange sky." loading="lazy" />
+          </a>
+          <figcaption class="tile-cap">Quickly For Him</figcaption>
+        </figure>
+
+        <figure class="tile" data-category="temporal">
+          <a href="assets/portfolio/mountain-air.jpg" class="lb-link" data-title="Mountain Air — Blue Ridge Dusk">
+            <img src="assets/portfolio/mountain-air.jpg" alt="Blue Ridge Mountains at dusk with layered ridgelines and a pale gradient sky; spruce silhouettes in the foreground." loading="lazy" />
+          </a>
+          <figcaption class="tile-cap">Mountain Air — Blue Ridge Dusk</figcaption>
+        </figure>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Valentin Skald · Content licensed <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a></p>
+  </footer>
+
+  <!-- LIGHTBOX DIALOG -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lb-btn lb-close" id="lbClose">Close</button>
+    <div class="lightbox__inner">
+      <img class="lightbox__img" id="lbImg" alt="" />
+      <div class="lightbox__caption" id="lbCap"></div>
+    </div>
+    <div class="lightbox__controls">
+      <button class="lb-btn" id="lbPrev" aria-label="Previous image">← Prev</button>
+      <button class="lb-btn" id="lbNext" aria-label="Next image">Next →</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Filter
+    const buttons = document.querySelectorAll('.filter-btn');
+    const tiles   = document.querySelectorAll('.gallery-grid .tile');
+    function applyFilter(filter) {
+      tiles.forEach(tile => {
+        const match = filter === 'all' || tile.dataset.category === filter;
+        tile.classList.toggle('is-hidden', !match);
+        tile.toggleAttribute('hidden', !match);
+      });
+    }
+    buttons.forEach(btn => btn.addEventListener('click', () => {
+      buttons.forEach(b => { b.classList.remove('is-active'); b.setAttribute('aria-pressed','false'); });
+      btn.classList.add('is-active'); btn.setAttribute('aria-pressed','true');
+      applyFilter(btn.dataset.filter);
+    }));
+
+    // Lightbox
+    const links = [...document.querySelectorAll('.lb-link')];
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lbImg');
+    const lbCap = document.getElementById('lbCap');
+    const lbPrev = document.getElementById('lbPrev');
+    const lbNext = document.getElementById('lbNext');
+    const lbClose = document.getElementById('lbClose');
+    let index = -1;
+
+    function openLB(i) {
+      index = i;
+      const a = links[index];
+      lbImg.src = a.getAttribute('href');
+      lbImg.alt = a.querySelector('img')?.alt || '';
+      lbCap.textContent = a.dataset.title || '';
+      lightbox.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      lbClose.focus();
+    }
+    function closeLB() {
+      lightbox.classList.remove('is-open');
+      document.body.style.overflow = '';
+      if (index >= 0) links[index].focus();
+      index = -1;
+    }
+    function prevLB(){ openLB((index - 1 + links.length) % links.length); }
+    function nextLB(){ openLB((index + 1) % links.length); }
+
+    links.forEach((a, i) => {
+      a.addEventListener('click', e => { e.preventDefault(); openLB(i); });
+      a.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLB(i); }});
+    });
+    lbPrev.addEventListener('click', prevLB);
+    lbNext.addEventListener('click', nextLB);
+    lbClose.addEventListener('click', closeLB);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLB(); });
+    document.addEventListener('keydown', e => {
+      if (!lightbox.classList.contains('is-open')) return;
+      if (e.key === 'Escape') closeLB();
+      if (e.key === 'ArrowLeft') prevLB();
+      if (e.key === 'ArrowRight') nextLB();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Info — Valentin Skald</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Merriweather:wght@700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" role="banner">
+    <nav class="site-nav" aria-label="Primary">
+      <a class="brand-link" href="index.html"><span class="logo-text">Valentin Skald</span></a>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="info.html" aria-current="page">Info</a></li>
+      </ul>
+    </nav>
+
+    <div class="brand">
+      <h1 class="site-title">Info</h1>
+      <p class="tagline">Statement, process, and ways to connect.</p>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="info-wrap section">
+      <figure class="info-figure">
+        <img src="assets/valentin-portrait.jpg" alt="Portrait of Valentin Skald in soft window light, hands clasped beneath chin in a black turtleneck, shallow depth of field with a warm interior blur." />
+        <figcaption class="info-cap">Workspace / Portrait</figcaption>
+      </figure>
+
+      <article class="info-copy">
+        <section>
+          <h2>Artist Statement</h2>
+          <p>I work where fine art and street photography meet. I’m drawn to material culture and the evidence of touch—objects, thresholds, and the way light cuts across ordinary spaces. Low-light scenes—lamps, windows, silhouettes—let comfort and unease coexist. I don’t aim for ambiguity; interpretation is part of viewing. These images are records of encounter, shaped by interests in nostalgia, possessions, semiotics, and the histories they carry.</p>
+        </section>
+
+        <section class="cards">
+          <article class="card">
+            <h3>Process</h3>
+            <p>Walks at dusk and night. Workflows focus on restraint in editing—contrast, subtle color shifts, careful crop.</p>
+          </article>
+          <article class="card">
+            <h3>Ethics</h3>
+            <p>Street work respects privacy and context. I avoid sensationalism, foregrounding place, object, and line.</p>
+          </article>
+          <article class="card">
+            <h3>Exhibitions & Prints</h3>
+            <p>Get in touch about small-run prints or zines. I’m happy to share print specs on request.</p>
+          </article>
+        </section>
+
+        <section>
+          <h2>Contact</h2>
+          <ul class="links">
+            <li><a href="mailto:valentinskald@gmail.com">valentinskald@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/valentin-skald/" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://www.instagram.com/future_tome/" target="_blank" rel="noopener">Instagram @future_tome</a></li>
+          </ul>
+        </section>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Valentin Skald · Content licensed <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener">CC BY-NC-ND 4.0</a></p>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

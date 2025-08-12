@@ -1,0 +1,125 @@
+/* =========================================================
+   Valentin Skald — Photography Portfolio (Final)
+   Shared stylesheet for: index.html, gallery.html, info.html
+   Fonts: Atkinson Hyperlegible (body), Merriweather (headings)
+   Theme: near-black background, accessible contrast & focus
+   ========================================================= */
+
+/* ---------- Theme tokens ---------- */
+:root{
+  --bg:#0b0c0f; --ink:#e8e8e8; --ink-muted:#b8bec2;
+  --edge:#1b1e24; --brand:#c6ebbe; --panel:#0f1115; --radius:16px;
+}
+
+/* ---------- Base ---------- */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink)}
+body{
+  font-family:"Atkinson Hyperlegible",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+  line-height:1.7; text-rendering:optimizeLegibility;
+}
+img{max-width:100%;height:auto;display:block} /* keep aspect ratio */
+:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+
+/* Skip link */
+.skip-link{position:absolute;left:-9999px;top:0;background:#121316;border:1px solid var(--edge);padding:.5rem .75rem;border-radius:8px}
+.skip-link:focus{left:.5rem;top:.5rem;z-index:1000}
+
+/* ---------- Type ---------- */
+h1,h2,h3{font-family:"Merriweather",Georgia,"Times New Roman",Times,serif;letter-spacing:.2px}
+h1.site-title{font-weight:900;font-size:clamp(1.4rem,1.6vw + 1rem,2rem);margin:0}
+h2{font-weight:800;font-size:1.35rem;margin:0 0 .5rem 0}
+
+/* ---------- Header & Nav (Flexbox) ---------- */
+.site-header{
+  border-bottom:1px solid var(--edge);
+  background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,0));
+}
+.site-nav{
+  display:flex;align-items:center;justify-content:space-between;gap:.75rem;
+  padding:.6rem 1rem .8rem 1rem;border-bottom:1px solid var(--edge)
+}
+.brand-link{text-decoration:none;color:var(--ink)}
+.logo-text{font-family:"Merriweather",Georgia,"Times New Roman",Times,serif;font-weight:900}
+.nav{list-style:none;display:flex;gap:.6rem;margin:0;padding:0}
+.nav a{color:var(--ink);text-decoration:none;padding:.35rem .7rem;border-radius:999px;border:1px solid transparent}
+.nav a[aria-current="page"]{border-color:var(--edge)}
+.nav a:hover{text-decoration:underline;text-underline-offset:3px}
+.brand{padding:1.25rem 1rem .75rem 1rem;text-align:center}
+.tagline{margin:.35rem 0 0 0;color:var(--ink-muted);font-size:.98rem}
+
+/* ---------- Shared section wrapper ---------- */
+.section{max-width:1120px;margin:2rem auto;padding:0 1rem}
+
+/* ---------- Home (Grid on wide) ---------- */
+.intro-grid{display:grid;gap:1rem}
+@media (min-width:900px){.intro-grid{grid-template-columns:1fr 1.2fr;align-items:start;gap:1.25rem}}
+.portrait{position:relative;border:1px solid var(--edge);border-radius:var(--radius);overflow:hidden;box-shadow:0 16px 44px rgba(0,0,0,.45)}
+.portrait img{transition:transform .35s ease,filter .35s ease}
+.portrait:hover img{transform:scale(1.02);filter:contrast(1.03) saturate(1.02)}
+.caption{position:absolute;left:0;right:0;bottom:0;padding:.5rem .75rem;font-size:.9rem;color:var(--ink);
+  background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.55))}
+.about p{color:var(--ink-muted);margin:.6rem 0 0 0}
+
+/* External links block */
+.links{list-style:none;margin:.25rem 0 0 0;padding:0;display:grid;gap:.4rem}
+.links a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s ease,text-underline-offset .2s ease}
+.links a:hover{color:var(--brand);text-underline-offset:4px}
+
+/* ---------- Gallery: Filter controls ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin:.5rem 0 0 0}
+.filters-note{color:var(--ink-muted);margin:.25rem 0 .5rem 0}
+.filter-btn{
+  appearance:none;cursor:pointer;border:1px solid var(--edge);
+  background:linear-gradient(180deg,#121316,#0a0b0e);color:var(--ink);
+  padding:.45rem .8rem;border-radius:999px;transition:filter .15s ease, border-color .15s ease;
+}
+.filter-btn:hover{filter:brightness(1.08)}
+.filter-btn.is-active,.filter-btn[aria-pressed="true"]{background:#0e1319;border-color:#2a2f37}
+.tile.is-hidden{display:none}
+
+/* ---------- Gallery (Grid with nested Grid) ---------- */
+.gallery-hero{padding:1rem 1rem 0 1rem;text-align:center}
+.gallery-layout{
+  display:grid;grid-template-columns:1fr;gap:1.25rem;max-width:1120px;margin:1.5rem auto 2rem auto;padding:0 1rem
+}
+@media (min-width:980px){.gallery-layout{grid-template-columns:minmax(240px,320px) 1fr}}
+.gallery-aside h2,.gallery-aside h3{font-family:"Merriweather",Georgia,"Times New Roman",Times,serif;font-weight:800;margin:0 0 .35rem 0}
+.gallery-aside p{color:var(--ink-muted);margin:.5rem 0 0 0}
+.gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.75rem}
+.tile{border:1px solid var(--edge);border-radius:var(--radius);overflow:hidden;background:var(--panel);box-shadow:0 12px 36px rgba(0,0,0,.35)}
+.tile img{width:100%;height:auto;display:block;transition:transform .3s ease,filter .3s ease}
+.tile:hover img{transform:scale(1.015);filter:contrast(1.03) saturate(1.02)}
+.tile-cap{padding:.45rem .6rem;font-size:.92rem;color:var(--ink);background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.55));border-top:1px solid var(--edge)}
+
+/* ---------- Info (Flexbox + inner Grid cards) ---------- */
+.info-wrap{display:flex;flex-direction:column;gap:1rem}
+@media (min-width:980px){.info-wrap{flex-direction:row;align-items:flex-start;gap:1.25rem}}
+.info-figure{flex:1 1 40%;border:1px solid var(--edge);border-radius:var(--radius);overflow:hidden;background:var(--panel);box-shadow:0 16px 44px rgba(0,0,0,.45)}
+.info-cap{padding:.45rem .6rem;font-size:.92rem;color:var(--ink);border-top:1px solid var(--edge);background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.55))}
+.info-copy{flex:1 1 60%}
+.cards{display:grid;grid-template-columns:1fr;gap:.75rem;margin:1rem 0}
+@media (min-width:740px){.cards{grid-template-columns:repeat(3,1fr)}}
+.card{border:1px solid var(--edge);border-radius:var(--radius);background:var(--panel);padding:.9rem;box-shadow:0 12px 36px rgba(0,0,0,.35)}
+.card h3{margin:.2rem 0 .35rem 0}
+
+/* ---------- LIGHTBOX ---------- */
+.lightbox{
+  position:fixed; inset:0; background:rgba(0,0,0,.92);
+  display:none; align-items:center; justify-content:center; z-index:9999;
+}
+.lightbox.is-open{display:flex}
+.lightbox__inner{max-width:96vw; max-height:90vh; display:grid; grid-template-rows:1fr auto; gap:.5rem; padding:1rem}
+.lightbox__img{max-width:96vw; max-height:80vh; object-fit:contain; border:1px solid var(--edge); border-radius:12px; background:#000}
+.lightbox__caption{color:var(--ink-muted); text-align:center; font-size:.98rem}
+.lightbox__controls{position:absolute; inset:auto 0 0 0; display:flex; justify-content:space-between; padding:1rem}
+.lb-btn{
+  background:#0e1319; color:var(--ink); border:1px solid var(--edge);
+  padding:.5rem .8rem; border-radius:10px; cursor:pointer;
+}
+.lb-btn:hover{filter:brightness(1.08)}
+.lb-close{position:absolute; top:1rem; right:1rem}
+
+/* ---------- Footer ---------- */
+.site-footer{border-top:1px solid var(--edge);color:var(--ink-muted);text-align:center;padding:1rem;font-size:.95rem}
+.site-footer a{color:var(--ink-muted);text-decoration:underline;text-underline-offset:2px}
