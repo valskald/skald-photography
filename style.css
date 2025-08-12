@@ -61,6 +61,39 @@ h2{font-weight:800;font-size:1.35rem;margin:0 0 .5rem 0}
   background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.55))}
 .about p{color:var(--ink-muted);margin:.6rem 0 0 0}
 
+/* ---------- NEW: Home hero (borderless landscape + caption) ---------- */
+.hero{
+  max-width:1120px;
+  margin:2rem auto;
+  padding:0 1rem;
+}
+.hero-figure{
+  margin:0 auto;
+  width:100%;
+  max-width:1000px;              /* comfortable max width for the hero image */
+}
+.hero-figure img{
+  border:0;
+  border-radius:0;
+  box-shadow:none;               /* “floating” — no frame */
+  display:block;
+}
+.hero-figure figcaption{
+  margin-top:.75rem;
+  text-align:center;
+  font-size:.95rem;
+  color:var(--ink-muted);
+  line-height:1.45;
+}
+
+/* ---------- NEW: Center the About section under the hero ---------- */
+.about{
+  max-width:60ch;                /* readable line length */
+  margin:2.5rem auto 0;          /* centers the block beneath the hero */
+  text-align:center;
+  padding:0 1rem;                /* light side padding on small screens */
+}
+
 /* External links block */
 .links{list-style:none;margin:.25rem 0 0 0;padding:0;display:grid;gap:.4rem}
 .links a{color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px;transition:color .2s ease,text-underline-offset .2s ease}
